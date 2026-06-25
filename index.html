@@ -13,7 +13,6 @@
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--verde-escuro);color:var(--text);font-family:var(--font);font-size:14px;min-height:100vh;}
-
   .topbar{background:var(--verde-medio);border-bottom:3px solid var(--amarelo);padding:0 2rem;height:66px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 18px rgba(0,0,0,.45);}
   .logo-wrap{display:flex;align-items:center;gap:14px;}
   .logo-img{height:46px;width:46px;object-fit:contain;border-radius:8px;}
@@ -23,26 +22,21 @@
   .topbar-right{display:flex;align-items:center;gap:14px;}
   .status-badge{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);}
   .pulse{width:8px;height:8px;border-radius:50%;animation:pulse 2s infinite;}
-  .pulse.ok{background:#4caf6e;}.pulse.err{background:var(--danger);animation:none;}.pulse.loading{background:var(--amarelo);}
+  .pulse.ok{background:#4caf6e;} .pulse.err{background:var(--danger);animation:none;} .pulse.loading{background:var(--amarelo);}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-  .btn{background:var(--amarelo);border:none;color:var(--verde-escuro);padding:7px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .15s,transform .1s;letter-spacing:.3px;}
+  .btn{background:var(--amarelo);border:none;color:var(--verde-escuro);padding:7px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background .15s,transform .1s;}
   .btn:hover{background:var(--amarelo2);transform:translateY(-1px);}
   .btn svg{width:14px;height:14px;}
-
   .main{padding:1.75rem 2rem;max-width:1500px;margin:0 auto;}
   .section-label{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--amarelo);margin-bottom:10px;font-weight:700;display:flex;align-items:center;gap:10px;}
   .section-label::after{content:"";flex:1;height:1px;background:rgba(245,200,0,.18);}
-
-  /* FILTRO DATA */
   .filtro-data-wrap{background:var(--verde-card);border:1px solid var(--verde-borda);border-radius:var(--radius-lg);padding:1rem 1.3rem;display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:1.5rem;}
   .filtro-data-wrap label{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;}
   .filtro-data-wrap input[type=date]{background:var(--verde-escuro);border:1px solid rgba(245,200,0,.25);color:var(--text);padding:5px 10px;border-radius:7px;font-size:12px;cursor:pointer;outline:none;color-scheme:dark;}
   .filtro-data-wrap input[type=date]:focus{border-color:var(--amarelo);}
-  .btn-limpar{background:transparent;border:1px solid rgba(245,200,0,.3);color:var(--amarelo);padding:5px 14px;border-radius:7px;font-size:12px;cursor:pointer;transition:background .15s;}
+  .btn-limpar{background:transparent;border:1px solid rgba(245,200,0,.3);color:var(--amarelo);padding:5px 14px;border-radius:7px;font-size:12px;cursor:pointer;}
   .btn-limpar:hover{background:rgba(245,200,0,.08);}
   .filtro-info{font-size:12px;color:var(--muted);margin-left:auto;}
-
-  /* CARDS */
   .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:1.75rem;}
   .card{background:var(--verde-card);border:1px solid var(--verde-borda);border-top:3px solid var(--amarelo);border-radius:var(--radius-lg);padding:1.15rem 1.3rem;transition:transform .15s,box-shadow .15s;}
   .card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.3);}
@@ -51,8 +45,6 @@
   .card-value{font-size:28px;font-weight:700;letter-spacing:-1px;color:var(--text);line-height:1;}
   .card-value.sm{font-size:19px;letter-spacing:-.3px;}
   .card-sub{font-size:11px;color:var(--muted);margin-top:5px;}
-
-  /* CHARTS */
   .charts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.75rem;}
   @media(max-width:768px){.charts{grid-template-columns:1fr;}}
   .panel{background:var(--verde-card);border:1px solid var(--verde-borda);border-radius:var(--radius-lg);padding:1.15rem 1.3rem;}
@@ -61,8 +53,6 @@
   .legend{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px;}
   .legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--muted);}
   .leg-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
-
-  /* TABLES */
   .table-panel{background:var(--verde-card);border:1px solid var(--verde-borda);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:1.5rem;}
   .table-header{padding:1rem 1.3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--verde-borda);background:var(--verde-medio);}
   .table-title{font-size:12px;text-transform:uppercase;letter-spacing:.7px;color:var(--amarelo);font-weight:700;}
@@ -73,7 +63,7 @@
   table{width:100%;border-collapse:collapse;font-size:12.5px;}
   thead tr{background:var(--verde-medio);position:sticky;top:0;z-index:2;}
   th{font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--amarelo);padding:10px 14px;text-align:left;white-space:nowrap;border-bottom:1px solid rgba(245,200,0,.15);}
-  td{padding:9px 14px;border-bottom:1px solid var(--verde-borda);color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px;}
+  td{padding:9px 14px;border-bottom:1px solid var(--verde-borda);color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:200px;}
   tbody tr:last-child td{border-bottom:none;}
   tbody tr:hover td{background:rgba(245,200,0,.05);}
   .val-cell{font-variant-numeric:tabular-nums;color:var(--amarelo);font-weight:600;}
@@ -83,12 +73,9 @@
   .badge-ok{background:rgba(76,175,110,.15);color:#4caf6e;}
   .badge-warn{background:rgba(245,200,0,.15);color:var(--amarelo);}
   .badge-danger{background:rgba(224,82,82,.15);color:var(--danger);}
-
   .loading{display:flex;align-items:center;justify-content:center;padding:3rem;color:var(--muted);gap:10px;font-size:13px;}
   .spinner{width:18px;height:18px;border:2px solid var(--verde-borda);border-top-color:var(--amarelo);border-radius:50%;animation:spin .7s linear infinite;}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .erro-msg{background:rgba(224,82,82,.08);border:1px solid rgba(224,82,82,.3);border-radius:10px;padding:1.1rem 1.4rem;margin-bottom:1.5rem;display:none;font-size:13px;color:var(--muted);line-height:1.7;}
-  .erro-msg strong{color:var(--danger);display:block;margin-bottom:4px;}
   .footer{padding:1rem 2rem;text-align:center;font-size:11px;color:var(--muted);border-top:1px solid var(--verde-borda);margin-top:1.5rem;letter-spacing:.3px;}
   .footer span{color:var(--amarelo);font-weight:600;}
 </style>
@@ -117,8 +104,6 @@
 </nav>
 
 <main class="main">
-  <div class="erro-msg" id="erro-msg"><strong>⚠️ Não foi possível carregar os dados</strong>Verifique se o Apps Script está implantado com acesso "Qualquer pessoa".</div>
-
   <div class="section-label">Filtro de período</div>
   <div class="filtro-data-wrap">
     <label>De: <input type="date" id="f-data-ini" onchange="applyFilters()"/></label>
@@ -179,7 +164,7 @@
         <select id="f-frota" onchange="applyFilters()"><option value="">Todas as frotas</option></select>
       </div>
     </div>
-    <div id="tbody-wrap"><div class="loading"><div class="spinner"></div> Conectando...</div></div>
+    <div id="tbody-wrap"><div class="loading"><div class="spinner"></div> Carregando...</div></div>
   </div>
 
   <div class="section-label">📊 Análise por produto e frota</div>
@@ -204,7 +189,6 @@ const API_URL="https://script.google.com/macros/s/AKfycbwLndIn6pchWiFy5fnFuOfddl
 let allData=[],cGrupo=null,cData=null;
 const COLORS=["#f5c800","#4caf6e","#e07b39","#79c0ff","#bc8cff","#f78166","#56d364","#ffa657"];
 
-// ── HELPERS ──────────────────────────────────────────────────────
 function parseBRL(v){
   if(v===null||v===undefined||v==="") return 0;
   if(typeof v==="number") return v;
@@ -212,49 +196,52 @@ function parseBRL(v){
 }
 function fmtBRL(n){return "R$ "+Number(n).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2});}
 
-// Normaliza qualquer formato de data para "YYYY-MM-DD" ou null
 function parseDate(v){
-  if(!v&&v!==0) return null;
+  if(v===null||v===undefined||v==="") return null;
   let s=String(v).trim();
-  // ISO com T: 2026-06-15T03:00:00.000Z
-  if(s.includes("T")){s=s.split("T")[0];}
-  // yyyy-mm-dd
+  if(s.includes("T")) s=s.split("T")[0];
   if(/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
-  // dd/mm/yyyy
   const a=s.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
-  if(a) return `${a[3]}-${a[2]}-${a[1]}`;
-  // mm/dd/yyyy (planilha US)
+  if(a) return a[3]+"-"+a[2]+"-"+a[1];
   const b=s.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
-  if(b) return `${b[3]}-${b[1].padStart(2,"0")}-${b[2].padStart(2,"0")}`;
+  if(b) return b[3]+"-"+b[1].padStart(2,"0")+"-"+b[2].padStart(2,"0");
   return null;
 }
 function fmtDDMMYYYY(iso){
   if(!iso) return "";
-  const [y,m,d]=iso.split("-");
-  return `${d}/${m}/${y}`;
+  const p=iso.split("-");
+  return p[2]+"/"+p[1]+"/"+p[0];
 }
-function unique(arr){return[...new Set(arr.filter(v=>v!==null&&v!==undefined&&v!==""))].sort();}
+function unique(arr){return[...new Set(arr.filter(v=>v!==null&&v!==undefined&&String(v).trim()!==""))].sort();}
+
+// Busca coluna por nome exato primeiro, depois parcial
 function getKey(row,names){
   for(const n of names){
-    const k=Object.keys(row).find(k=>k.trim().toLowerCase().includes(n.toLowerCase()));
-    if(k!==undefined&&row[k]!==null&&row[k]!==undefined&&row[k]!=="") return row[k];
+    // busca exata (case insensitive)
+    const k1=Object.keys(row).find(k=>k.trim().toLowerCase()===n.toLowerCase());
+    if(k1!==undefined&&row[k1]!==null&&row[k1]!==undefined&&String(row[k1]).trim()!=="") return row[k1];
+  }
+  for(const n of names){
+    // busca parcial
+    const k2=Object.keys(row).find(k=>k.trim().toLowerCase().includes(n.toLowerCase()));
+    if(k2!==undefined&&row[k2]!==null&&row[k2]!==undefined&&String(row[k2]).trim()!=="") return row[k2];
   }
   return "";
 }
+
 function setStatus(type,msg){
   document.getElementById("pulse").className="pulse "+(type==="ok"?"ok":type);
   document.getElementById("last-update").textContent=msg;
 }
 function todayISO(){
   const d=new Date();
-  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 }
 function diffDias(isoA,isoB){
   if(!isoA||!isoB) return null;
   return Math.round((new Date(isoB)-new Date(isoA))/(1000*60*60*24));
 }
 
-// ── LOAD ─────────────────────────────────────────────────────────
 async function loadData(){
   setStatus("loading","Atualizando...");
   try{
@@ -262,30 +249,27 @@ async function loadData(){
     if(!res.ok) throw new Error("HTTP "+res.status);
     const json=await res.json();
     allData=Array.isArray(json)?json:[];
-    document.getElementById("erro-msg").style.display="none";
     buildFilters();
     applyFilters();
     setStatus("ok","Atualizado "+new Date().toLocaleString("pt-BR"));
   }catch(e){
     console.error(e);
-    setStatus("err","Erro ao carregar");
-    document.getElementById("erro-msg").style.display="block";
-    document.getElementById("tbody-wrap").innerHTML="<div class='loading'>Não foi possível carregar os dados.</div>";
+    setStatus("err","Erro ao carregar — tentando novamente em 30s");
+    setTimeout(loadData,30000);
   }
 }
 
-// ── FILTROS ───────────────────────────────────────────────────────
 function buildFilters(){
   const grupos=unique(allData.map(r=>getKey(r,["Grupo","grupo"])));
   const frotas=unique(allData.map(r=>getKey(r,["FROTA","Frota","frota"])));
   ["f-grupo","a-grupo"].forEach(id=>{
     const el=document.getElementById(id),v=el.value;
-    el.innerHTML="<option value=''>Todos os grupos</option>"+grupos.map(g=>`<option>${g}</option>`).join("");
+    el.innerHTML="<option value=''>Todos os grupos</option>"+grupos.map(g=>"<option>"+g+"</option>").join("");
     el.value=v;
   });
   ["f-frota","a-frota"].forEach(id=>{
     const el=document.getElementById(id),v=el.value;
-    el.innerHTML="<option value=''>Todas as frotas</option>"+frotas.map(f=>`<option>${f}</option>`).join("");
+    el.innerHTML="<option value=''>Todas as frotas</option>"+frotas.map(f=>"<option>"+f+"</option>").join("");
     el.value=v;
   });
 }
@@ -301,9 +285,9 @@ function getFiltered(){
   const fr=document.getElementById("f-frota").value;
   const di=document.getElementById("f-data-ini").value;
   const df=document.getElementById("f-data-fim").value;
-  return allData.filter(r=>{
-    if(g&&getKey(r,["Grupo","grupo"])!==g) return false;
-    if(fr&&getKey(r,["FROTA","Frota","frota"])!==fr) return false;
+  return allData.filter(function(r){
+    if(g){const rg=getKey(r,["Grupo","grupo"]); if(rg!==g) return false;}
+    if(fr){const rf=getKey(r,["FROTA","Frota","frota"]); if(rf!==fr) return false;}
     if(di||df){
       const rd=parseDate(getKey(r,["Data","data"]));
       if(!rd) return false;
@@ -322,31 +306,28 @@ function applyFilters(){
   if(di||df){
     const a=di?fmtDDMMYYYY(di):"início";
     const b=df?fmtDDMMYYYY(df):"hoje";
-    info=`Período: ${a} → ${b} · ${data.length} registro(s)`;
+    info="Período: "+a+" → "+b+" · "+data.length+" registro(s)";
   } else {
-    info=`Total: ${allData.length} registro(s)`;
+    info="Total: "+allData.length+" registro(s)";
   }
   document.getElementById("filtro-info").textContent=info;
   updateCards(data);
   updateCharts(data);
   renderTable(data);
-  renderAnalise();
+  if(allData&&allData.length>0) renderAnalise();
 }
 
-// ── CARDS ─────────────────────────────────────────────────────────
 function updateCards(data){
   const nros=new Set(data.map(r=>getKey(r,["Nro único","Nro unico","nro único","nro unico"])).filter(Boolean));
   document.getElementById("c-reg").textContent=nros.size.toLocaleString("pt-BR");
   document.getElementById("c-reg-sub").textContent=data.length+" linha(s) no período";
-
-  const total=data.reduce((s,r)=>s+parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"])),0);
+  const total=data.reduce(function(s,r){return s+parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"]));},0);
   document.getElementById("c-val").textContent=fmtBRL(total);
-
   const datas=data.map(r=>parseDate(getKey(r,["Data","data"]))).filter(Boolean).sort();
   if(datas.length){
     const ult=datas[datas.length-1];
     const rowsUlt=data.filter(r=>parseDate(getKey(r,["Data","data"]))===ult);
-    const vUlt=rowsUlt.reduce((s,r)=>s+parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"])),0);
+    const vUlt=rowsUlt.reduce(function(s,r){return s+parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"]));},0);
     document.getElementById("c-ultimo").textContent=fmtBRL(vUlt);
     document.getElementById("c-ultimo-sub").textContent=fmtDDMMYYYY(ult)+" · "+rowsUlt.length+" registro(s)";
   } else {
@@ -356,32 +337,25 @@ function updateCards(data){
   document.getElementById("c-sol").textContent=unique(data.map(r=>getKey(r,["Solicitante","solicitante"]))).length;
 }
 
-// ── GRÁFICOS ──────────────────────────────────────────────────────
 function updateCharts(data){
-  // — Gráfico 1: Barras por grupo com rótulos
   const gMap={};
-  data.forEach(r=>{
+  data.forEach(function(r){
     const g=getKey(r,["Grupo","grupo"])||"Sem grupo";
     gMap[g]=(gMap[g]||0)+parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"]));
   });
-  const gL=Object.keys(gMap).sort((a,b)=>gMap[b]-gMap[a]).slice(0,8);
-  const gV=gL.map(g=>gMap[g]);
-  const gC=gL.map((_,i)=>COLORS[i%COLORS.length]);
-
-  document.getElementById("leg-grupo").innerHTML=gL.map((g,i)=>
-    `<div class="legend-item"><span class="leg-dot" style="background:${gC[i]}"></span>${g}</div>`).join("");
-
+  const gL=Object.keys(gMap).sort(function(a,b){return gMap[b]-gMap[a];}).slice(0,8);
+  const gV=gL.map(function(g){return gMap[g];});
+  const gC=gL.map(function(_,i){return COLORS[i%COLORS.length];});
+  document.getElementById("leg-grupo").innerHTML=gL.map(function(g,i){
+    return "<div class='legend-item'><span class='leg-dot' style='background:"+gC[i]+"'></span>"+g+"</div>";
+  }).join("");
   if(cGrupo) cGrupo.destroy();
   cGrupo=new Chart(document.getElementById("chart-grupo"),{
     type:"bar",
-    data:{labels:gL.map(g=>g.length>13?g.slice(0,13)+"…":g),datasets:[{data:gV,backgroundColor:gC,borderRadius:7,borderSkipped:false}]},
+    data:{labels:gL.map(function(g){return g.length>13?g.slice(0,13)+"…":g;}),datasets:[{data:gV,backgroundColor:gC,borderRadius:7,borderSkipped:false}]},
     options:{
       responsive:true,maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{callbacks:{label:ctx=>fmtBRL(ctx.raw)}},
-        datalabels:{display:false}
-      },
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return fmtBRL(ctx.raw);}}}},
       layout:{padding:{top:28}},
       scales:{
         x:{ticks:{color:"#8aab8a",font:{size:11},autoSkip:false,maxRotation:30},grid:{display:false},border:{display:false}},
@@ -390,9 +364,9 @@ function updateCharts(data){
     },
     plugins:[{
       id:"topLabels",
-      afterDatasetsDraw(chart){
-        const {ctx,data,scales:{x,y}}=chart;
-        chart.data.datasets[0].data.forEach((val,i)=>{
+      afterDatasetsDraw:function(chart){
+        const ctx=chart.ctx;
+        chart.data.datasets[0].data.forEach(function(val,i){
           const bar=chart.getDatasetMeta(0).data[i];
           ctx.save();
           ctx.fillStyle="#f5c800";
@@ -407,9 +381,8 @@ function updateCharts(data){
     }]
   });
 
-  // — Gráfico 2: Combinado Qtd vs Valor por data
   const dMap={};
-  data.forEach(r=>{
+  data.forEach(function(r){
     const dt=parseDate(getKey(r,["Data","data"]));
     if(!dt) return;
     if(!dMap[dt]) dMap[dt]={qtd:0,val:0};
@@ -417,10 +390,9 @@ function updateCharts(data){
     dMap[dt].val+=parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"]));
   });
   const dL=Object.keys(dMap).sort();
-  const dQtd=dL.map(d=>dMap[d].qtd);
-  const dVal=dL.map(d=>dMap[d].val);
-  const dLabels=dL.map(d=>fmtDDMMYYYY(d));
-
+  const dLabels=dL.map(function(d){return fmtDDMMYYYY(d);});
+  const dQtd=dL.map(function(d){return dMap[d].qtd;});
+  const dVal=dL.map(function(d){return dMap[d].val;});
   if(cData) cData.destroy();
   cData=new Chart(document.getElementById("chart-data"),{
     type:"bar",
@@ -433,121 +405,86 @@ function updateCharts(data){
     },
     options:{
       responsive:true,maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{callbacks:{
-          label:ctx=>ctx.dataset.label==="Valor (R$)"?fmtBRL(ctx.raw):ctx.raw+" baixas"
-        }}
-      },
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label==="Valor (R$)"?fmtBRL(ctx.raw):ctx.raw+" baixas";}}}},
       scales:{
         x:{ticks:{color:"#8aab8a",font:{size:11},maxRotation:30,autoSkip:true,maxTicksLimit:10},grid:{display:false},border:{display:false}},
-        yVal:{position:"left",ticks:{color:"#f5c800",font:{size:10},callback:v=>"R$"+(v>=1000?(v/1000).toFixed(0)+"k":v)},grid:{color:"rgba(255,255,255,0.04)"},border:{display:false}},
+        yVal:{position:"left",ticks:{color:"#f5c800",font:{size:10},callback:function(v){return "R$"+(v>=1000?(v/1000).toFixed(0)+"k":v);}},grid:{color:"rgba(255,255,255,0.04)"},border:{display:false}},
         yQtd:{position:"right",ticks:{color:"#4caf6e",font:{size:10},stepSize:1},grid:{display:false},border:{display:false}}
       }
     }
   });
 }
 
-// ── TABELA REGISTROS ──────────────────────────────────────────────
 function renderTable(data){
-  const rows=(data||getFiltered()).slice(0,500);
   const wrap=document.getElementById("tbody-wrap");
-  if(!rows.length){wrap.innerHTML="<div class='loading'>Nenhum registro encontrado.</div>";return;}
-  const tbody=rows.map(r=>{
-    const dt    =fmtDDMMYYYY(parseDate(getKey(r,["Data","data"])));
-    const equip =getKey(r,["Equipamento","equipamento"]);
-    const nro   =getKey(r,["Nro único","Nro unico","nro único","nro unico"]);
-    const frota =getKey(r,["FROTA","Frota","frota"]);
-    const tipo  =getKey(r,["Tipo","tipo"]);
-    const grupo =getKey(r,["Grupo","grupo"]);
-    const desc  =getKey(r,["Descrição (Produto)","Descrição","descricao","Produto","produto"]);
-    const unid  =getKey(r,["Unidade","unidade"]);
-    const qtd   =parseFloat(getKey(r,["Quantidade","quantidade"])||0).toLocaleString("pt-BR");
-    const vtot  =parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"]));
-    const sol   =getKey(r,["Solicitante","solicitante"]);
-    return `<tr><td>${dt}</td><td title="${equip}">${equip}</td><td>${nro}</td><td>${frota}</td><td>${tipo}</td><td>${grupo}</td><td title="${desc}">${desc}</td><td>${unid}</td><td class="qty-cell">${qtd}</td><td class="val-cell">${fmtBRL(vtot)}</td><td title="${sol}">${sol}</td></tr>`;
+  if(!data||!data.length){
+    wrap.innerHTML="<div class='loading'>Nenhum registro encontrado.</div>";
+    return;
+  }
+  const rows=data.slice(0,500);
+  const tbody=rows.map(function(r){
+    const dt   =fmtDDMMYYYY(parseDate(getKey(r,["Data","data"])));
+    const equip=getKey(r,["Equipamento","equipamento"]);
+    const nro  =getKey(r,["Nro único","Nro unico","nro único","nro unico"]);
+    const frota=getKey(r,["FROTA","Frota","frota"]);
+    const tipo =getKey(r,["Tipo","tipo"]);
+    const grupo=getKey(r,["Grupo","grupo"]);
+    const desc =getKey(r,["Descrição (Produto)","Descrição","Descricao","descricao","Produto","produto"]);
+    const unid =getKey(r,["Unidade","unidade"]);
+    const qtd  =parseFloat(getKey(r,["Quantidade","quantidade"])||0).toLocaleString("pt-BR");
+    const vtot =parseBRL(getKey(r,["Vlr. total","vlr. total","Valor total","total"]));
+    const sol  =getKey(r,["Solicitante","solicitante"]);
+    return "<tr><td>"+dt+"</td><td title='"+equip+"'>"+equip+"</td><td>"+nro+"</td><td>"+frota+"</td><td>"+tipo+"</td><td>"+grupo+"</td><td title='"+desc+"'>"+desc+"</td><td>"+unid+"</td><td class='qty-cell'>"+qtd+"</td><td class='val-cell'>"+fmtBRL(vtot)+"</td><td title='"+sol+"'>"+sol+"</td></tr>";
   }).join("");
-  wrap.innerHTML=`<div class="tbl-wrap"><table>
-    <thead><tr><th>Data</th><th>Equipamento</th><th>Nro único</th><th>Frota</th><th>Tipo</th><th>Grupo</th><th>Descrição</th><th>Unid.</th><th>Qtd.</th><th>Vlr. total</th><th>Solicitante</th></tr></thead>
-    <tbody>${tbody}</tbody>
-  </table></div>`;
+  wrap.innerHTML="<div class='tbl-wrap'><table><thead><tr><th>Data</th><th>Equipamento</th><th>Nro único</th><th>Frota</th><th>Tipo</th><th>Grupo</th><th>Descrição</th><th>Unid.</th><th>Qtd.</th><th>Vlr. total</th><th>Solicitante</th></tr></thead><tbody>"+tbody+"</tbody></table></div>";
 }
 
-// ── TABELA ANÁLISE PRODUTO/FROTA ──────────────────────────────────
 function renderAnalise(){
   const g=document.getElementById("a-grupo").value;
   const fr=document.getElementById("a-frota").value;
   const wrap=document.getElementById("analise-wrap");
-  if(!allData.length){wrap.innerHTML="<div class='loading'>Aguardando dados...</div>";return;}
-
-  const base=allData.filter(r=>{
-    if(g&&getKey(r,["Grupo","grupo"])!==g) return false;
-    if(fr&&getKey(r,["FROTA","Frota","frota"])!==fr) return false;
+  if(!allData||allData.length===0){wrap.innerHTML="<div class='loading'><div class='spinner'></div> Aguardando dados...</div>";return;}
+  const base=allData.filter(function(r){
+    if(g){const rg=getKey(r,["Grupo","grupo"]); if(rg!==g) return false;}
+    if(fr){const rf=getKey(r,["FROTA","Frota","frota"]); if(rf!==fr) return false;}
     return true;
   });
-
   const hoje=todayISO();
-
-  // Agrupa por Tipo+Grupo+Frota+Produto+Descrição
   const map={};
-  base.forEach(r=>{
+  base.forEach(function(r){
     const tipo =getKey(r,["Tipo","tipo"]);
     const grupo=getKey(r,["Grupo","grupo"]);
     const frota=getKey(r,["FROTA","Frota","frota"]);
     const prod =getKey(r,["Produto","produto"]);
-    const desc =getKey(r,["Descrição (Produto)","Descrição","descricao"]);
+    const desc =getKey(r,["Descrição (Produto)","Descrição","Descricao","descricao"]);
     const qty  =parseFloat(getKey(r,["Quantidade","quantidade"])||0);
     const dt   =parseDate(getKey(r,["Data","data"]));
-    const key  =`${tipo}||${grupo}||${frota}||${prod}||${desc}`;
-    if(!map[key]) map[key]={tipo,grupo,frota,prod,desc,totalQtd:0,datas:[]};
+    const key  =tipo+"||"+grupo+"||"+frota+"||"+prod+"||"+desc;
+    if(!map[key]) map[key]={tipo:tipo,grupo:grupo,frota:frota,prod:prod,desc:desc,totalQtd:0,datas:[]};
     map[key].totalQtd+=qty;
     if(dt) map[key].datas.push(dt);
   });
-
-  const rows=Object.values(map).sort((a,b)=>a.grupo.localeCompare(b.grupo)||a.frota.localeCompare(b.frota)||a.desc.localeCompare(b.desc));
-
+  const rows=Object.values(map).sort(function(a,b){return a.grupo.localeCompare(b.grupo)||a.frota.localeCompare(b.frota)||a.desc.localeCompare(b.desc);});
   if(!rows.length){wrap.innerHTML="<div class='loading'>Nenhum dado para os filtros selecionados.</div>";return;}
-
-  const tbody=rows.map(r=>{
+  const tbody=rows.map(function(r){
     r.datas.sort();
     const primeiraData=r.datas[0];
-    const ultimaData  =r.datas[r.datas.length-1];
-    const nRegistros  =r.datas.length;
-
-    // Média de dias: intervalo total / (nº de registros - 1)
+    const ultimaData=r.datas[r.datas.length-1];
+    const nReg=r.datas.length;
     let mediaDias="—";
-    if(nRegistros>1){
+    if(nReg>1){
       const span=diffDias(primeiraData,ultimaData);
-      mediaDias=Math.round(span/(nRegistros-1))+" dias";
+      if(span!==null) mediaDias=Math.round(span/(nReg-1))+" dias";
     }
-
-    // Dias desde a última baixa
     const diasUltima=ultimaData?diffDias(ultimaData,hoje):null;
     let diasBadge="—";
     if(diasUltima!==null){
       const cls=diasUltima<=7?"badge-ok":diasUltima<=30?"badge-warn":"badge-danger";
-      diasBadge=`<span class="badge ${cls}">${diasUltima}d</span>`;
+      diasBadge="<span class='badge "+cls+"'>"+diasUltima+"d</span>";
     }
-
-    return `<tr>
-      <td>${r.tipo}</td>
-      <td>${r.grupo}</td>
-      <td>${r.frota}</td>
-      <td>${r.prod}</td>
-      <td title="${r.desc}">${r.desc}</td>
-      <td class="qty-cell">${r.totalQtd.toLocaleString("pt-BR")}</td>
-      <td class="dias-cell">${mediaDias}</td>
-      <td>${diasBadge}</td>
-    </tr>`;
+    return "<tr><td>"+r.tipo+"</td><td>"+r.grupo+"</td><td>"+r.frota+"</td><td>"+r.prod+"</td><td title='"+r.desc+"'>"+r.desc+"</td><td class='qty-cell'>"+r.totalQtd.toLocaleString("pt-BR")+"</td><td class='dias-cell'>"+mediaDias+"</td><td>"+diasBadge+"</td></tr>";
   }).join("");
-
-  wrap.innerHTML=`<div class="tbl-wrap"><table>
-    <thead><tr>
-      <th>Tipo</th><th>Grupo</th><th>Frota</th><th>Produto</th><th>Descrição</th>
-      <th>Qtd. total</th><th>Média dias</th><th>Dias desde última baixa</th>
-    </tr></thead>
-    <tbody>${tbody}</tbody>
-  </table></div>`;
+  wrap.innerHTML="<div class='tbl-wrap'><table><thead><tr><th>Tipo</th><th>Grupo</th><th>Frota</th><th>Produto</th><th>Descrição</th><th>Qtd. total</th><th>Média dias</th><th>Dias desde última baixa</th></tr></thead><tbody>"+tbody+"</tbody></table></div>";
 }
 
 loadData();
